@@ -1,6 +1,6 @@
 // Rede primeiro: pega a versão nova quando há internet; usa o cache quando está offline.
-const V = 'fin-v1';
-const ARQ = ['./', 'index.html', 'style.css', 'app.js', 'manifest.json', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
+const V = 'fin-v6';
+const ARQ = ['./', 'index.html', 'style.css', 'app.js', 'pdf.js', 'manifest.json', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(ARQ)));
   self.skipWaiting();
